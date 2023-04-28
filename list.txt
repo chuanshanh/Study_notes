@@ -6,5 +6,15 @@ git push -u origin master
 撤回：commit前
 git rm --cached 要撤回的文件
 
+更简单的上传：
+在Study_notes文件下方 gitbash
+先 cd Study_notes
+依次输入：
+git init
+git add .
+git commit -m "XXX"
+git push
+注意：不能直接上传空文件夹
+
 
 吴恩达2022机器学习专项课程(一）监督学习
