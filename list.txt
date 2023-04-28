@@ -3,5 +3,8 @@ git add xxx
 git commit -m "xxx"
 git push -u origin master
 
+撤回：commit前
+git rm --cached 要撤回的文件
+
 
 吴恩达2022机器学习专项课程(一）监督学习
