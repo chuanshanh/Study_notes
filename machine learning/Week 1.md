@@ -42,18 +42,38 @@
 
 <img src="C:\Users\24987\AppData\Roaming\Typora\typora-user-images\image-20230428102613205.png" alt="image-20230428102613205" style="zoom:70%;" />
 
+当f(w,b)时，对应的J(w,b)是一个类似碗状的3d曲面画图，可以用等高线图来理解，中间的最低点就是w,b的最佳取值，即J最小的时候情况。
+
+ps:遇到一个package argument问题，最终更新matplotlib版本到3.7.1解决，感谢群友
+
+![image-20230429090559539](C:\Users\24987\AppData\Roaming\Typora\typora-user-images\image-20230429090559539.png)
 
 
 
+==3.梯度下降法（gradient descent algorithm）==
 
+​	作用：寻找最小化的任意函数
 
+​	outline:1.start with some w,b.（=0）；
 
+​				 2.keep changing w,b to reduce J(w,b);
 
+​				 3.Until we settle at or near a mininum(may >1个)
 
+​	不同的起点-----找最大梯度下降的方向----->局部最小值
 
+![image-20230501113331465](C:\Users\24987\AppData\Roaming\Typora\typora-user-images\image-20230501113331465.png)
 
-### 	
+### 
 
-​	
+$$
+w=w-\alpha*\frac{\partial}{\partial w}J(w,b)
+$$
 
-​	
+$$
+b=b-\alpha*\frac{\partial}{\partial b}J(w,b)
+$$
+
+alpha是学习率（learning rate）即步幅，后跟的偏导函数是方向。
+
+注意：w,b要**同步更新**，用tmp_w,tmp_b存储，最后统一更新。
